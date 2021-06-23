@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;
+
+0,600;0,800;1,400;1,600&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -39,7 +42,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "";
+  font-family: "Open Sans";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -48,7 +51,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Open Sans";
 }
 
 input::-ms-clear {
@@ -92,7 +95,7 @@ h6 {
 }
 
 body {
-  color: #000;
+  color: #777;
   font-size: 14px;
 }
 
