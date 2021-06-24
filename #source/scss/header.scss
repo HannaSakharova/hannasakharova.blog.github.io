@@ -18,7 +18,7 @@
 	&__logo {
 	}
 	&__menu {
-		margin-right: -450px;
+		margin-right: -150px;
 	}
 	&__search {
 	}
@@ -27,17 +27,46 @@
 	&__icon {
 	}
 	&__body {
+		@media (max-width: $md3 + px) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #76c7c0;
+			padding: 100px 30px 30px 30px;
+			transition: left 0.3s ease 0s;
+		}
 	}
 	&__list {
+		@media (max-width: $md3 + px) {
+			font-size: 22px;
+		}
 		li {
 			position: relative;
 			margin: 0px 0px 0px 20px;
+			@media (max-width: $md3 + px) {
+				margin: 0px 0px 30px 0px;
+			}
+			&:last-child {
+				@media (max-width: $md3 + px) {
+					margin: 0px 0px 0px 0px;
+				}
+			}
 		}
 		@media (min-width: $md3 + px) {
 			display: flex;
 			align-items: center;
 			li {
-				padding: 10px 0px;
+				padding: 10px;
+				border-bottom: 5px solid transparent;
+				transition: all 0.3s ease 0s;
+				&:hover {
+					cursor: pointer;
+					border-radius: 5px;
+					background: #e6655e;
+					border-bottom: 5px solid #e2534b;
+				}
 			}
 		}
 	}
@@ -46,16 +75,29 @@
 		line-height: 16px;
 		font-weight: 600;
 		text-transform: uppercase;
+		&-s {
+			// margin-right: 5px;
+			&:hover {
+				padding-bottom: 28px;
+			}
+		}
+		&-3 {
+			margin-right: 5px;
+		}
+	}
+	&__arrow {
 	}
 	&__sub-list {
 		position: absolute;
-		top: 100%;
-		right: 0;
-		background-color: #e2534b;
+		top: 140%;
+		left: 0;
 		min-width: 200px;
 		border-radius: 5px;
 		z-index: 51;
+		background-color: #e2534b;
 		li {
+			white-space: nowrap;
+			padding: 0px 0px 0px 0px;
 			margin: 5px;
 			border-radius: 5px;
 		}
@@ -63,8 +105,12 @@
 			transform: translate(0px, 10%);
 			opacity: 0;
 			visibility: hidden;
-			transition: all 0.2s ease 0s;
 			pointer-events: none;
+		}
+		@media (max-width: $md3 + px) {
+			position: relative;
+			flex: 1 1 auto;
+			margin: 20px 0px 0px 0px;
 		}
 	}
 	&__sub-link {
@@ -72,35 +118,66 @@
 		color: #fff;
 		line-height: 1.23;
 		background-color: #e6655e;
-		padding: 8px 17px 8px 26px;
+		padding: 8px 17px 8px 11px;
 		&:hover {
 			background-color: #76c7c0;
+			border-radius: 5px;
+		}
+		span {
+			margin-right: 8px;
 		}
 	}
 }
+body._pc .menu__list > li:hover .menu__sub-list {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+	pointer-events: all;
+}
 
+body._pc .menu__list > li:hover .triangle-menu {
+	display: block;
+}
 //====================================================================================================
-/*
-	Стиль иконки бургера
-	.icon-menu{
+.icon-menu {
+	@media (max-width: $md3 + px) {
 		display: block;
 		position: absolute;
-		top: 18px;
+		top: 20px;
 		right: 10px;
-		width:30px;
+		width: 30px;
 		height: 18px;
 		cursor: pointer;
 		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
+		span {
+			@include anim(0.3s, 0s);
+			top: 8px;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
 		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
+		&.active {
+			span {
+				@include scale(0);
+				&:first-child {
+					@include rotate(-45deg);
+					top: 8px;
+				}
+				&:last-child {
+					@include rotate(45deg);
+					bottom: 8px;
+				}
 			}
 		}
 	}
-*/
+}
 //====================================================================================================

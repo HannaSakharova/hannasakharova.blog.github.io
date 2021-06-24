@@ -15,27 +15,24 @@
 
 .search {
 	position: relative;
-	width: 200px;
 	height: 42px;
 }
 .search-input {
 	height: 42px;
-	width: 0;
+	width: 200px;
 	padding: 0 42px 0 15px;
 	border: 5px solid #e2534b;
 	border-radius: 5px;
-	// outline: none;
-	transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+	transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
 	position: absolute;
 	top: 50px;
 	right: 0;
-	z-index: 2;
+	z-index: 5;
 	opacity: 0;
-	&:focus {
+	visibility: hidden;
+	&__active {
 		opacity: 1;
-		width: 200px;
-		z-index: 1;
-		border: 5px solid #e2534b;
+		visibility: visible;
 	}
 }
 
@@ -49,13 +46,19 @@
 	top: 0;
 	right: 0;
 	cursor: pointer;
+	transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
 	&:before {
 		content: url("../img/icons/search.png");
 		position: absolute;
 		top: 12px;
 		right: 13px;
+		z-index: 60;
 	}
-	&:active {
+	&:hover {
+		background: #e6655e;
+		border-bottom: 5px solid #e2534b;
+	}
+	&__active {
 		background: #e6655e;
 		border-bottom: 5px solid #e2534b;
 	}

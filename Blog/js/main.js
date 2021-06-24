@@ -31,8 +31,13 @@ testWebP(function (support) {
 	}
 });
 
+//Check the devise
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
-if (isMobile.any()) { }
+if (isMobile.any()) {
+	document.body.classList.add('_touch');
+} else {
+	document.body.classList.add('_pc');
+}
 
 if (location.hash) {
 	var hsh = location.hash.replace('#', '');
@@ -44,11 +49,7 @@ if (location.hash) {
 }
 $('.wrapper').addClass('loaded');
 
-var act = "click";
-if (isMobile.iOS()) {
-	var act = "touchstart";
-}
-
+//Menu burger
 let iconMenu = document.querySelector(".icon-menu");
 let body = document.querySelector("body");
 let menuBody = document.querySelector(".menu__body");
@@ -59,6 +60,16 @@ if (iconMenu) {
 		menuBody.classList.toggle("active");
 	});
 }
+
+//Show input-search
+let btnSearch = document.querySelector('.search-btn');
+let inputSearch = document.querySelector('.search-input');
+let arrowInput = document.querySelector('.triangle-search');
+btnSearch.addEventListener('click', () => {
+	btnSearch.classList.toggle('search-btn__active');
+	inputSearch.classList.toggle('search-input__active');
+	arrowInput.classList.toggle('triangle-search__active');
+});
 
 //ZOOM
 if ($('.gallery').length > 0) {

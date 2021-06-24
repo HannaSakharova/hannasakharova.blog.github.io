@@ -1,5 +1,33 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	transition: transition 0.3s ease 0s;
+	&-menu {
+		display: none;
+		border-bottom: 5px solid #e2534b;
+		position: absolute;
+		top: 45px;
+		left: 12px;
+	}
+	&-search {
+		display: none;
+		position: absolute;
+		border-bottom: 5px solid #e2534b;
+		top: 45px;
+		right: 15px;
+		&__active {
+			display: block;
+		}
+	}
+}
 
+.active-link {
+	background-color: #6ab3ad;
+	border-bottom: 5px solid #538c87;
+}
 //</ОСНОВНОЙ БЛОК>===================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>===================================================================================
