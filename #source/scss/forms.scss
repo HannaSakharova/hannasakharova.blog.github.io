@@ -12,6 +12,54 @@
 }
 .form-button {
 }
+
+.search {
+	position: relative;
+	width: 200px;
+	height: 42px;
+}
+.search-input {
+	height: 42px;
+	width: 0;
+	padding: 0 42px 0 15px;
+	border: 5px solid #e2534b;
+	border-radius: 5px;
+	// outline: none;
+	transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+	position: absolute;
+	top: 50px;
+	right: 0;
+	z-index: 2;
+	opacity: 0;
+	&:focus {
+		opacity: 1;
+		width: 200px;
+		z-index: 1;
+		border: 5px solid #e2534b;
+	}
+}
+
+.search-btn {
+	background: transparent;
+	border-bottom: 5px solid transparent;
+	border-radius: 5px;
+	height: 42px;
+	width: 42px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	&:before {
+		content: url("../img/icons/search.png");
+		position: absolute;
+		top: 12px;
+		right: 13px;
+	}
+	&:active {
+		background: #e6655e;
+		border-bottom: 5px solid #e2534b;
+	}
+}
 //</FORM>=============================================================================================
 
 //<BUTTONS (a.btn+tab)>===============================================================================

@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,italic,600,600italic,800);
 
-0,600;0,800;1,400;1,600&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -125,6 +124,59 @@ body.lock {
 
 .form__column {
   padding: 0px 15px;
+}
+
+.search {
+  position: relative;
+  width: 200px;
+  height: 42px;
+}
+
+.search-input {
+  height: 42px;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: 5px solid #e2534b;
+  border-radius: 5px;
+  -webkit-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  -o-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.search-input:focus {
+  opacity: 1;
+  width: 200px;
+  z-index: 1;
+  border: 5px solid #e2534b;
+}
+
+.search-btn {
+  background: transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 5px;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.search-btn:before {
+  content: url("../img/icons/search.png");
+  position: absolute;
+  top: 12px;
+  right: 13px;
+}
+
+.search-btn:active {
+  background: #e6655e;
+  border-bottom: 5px solid #e2534b;
 }
 
 .btn {
@@ -881,6 +933,75 @@ body.ie .ibg img {
   right: 0;
 }
 
+.header {
+  background-color: #76c7c0;
+  position: relative;
+  z-index: 50;
+}
+
+.header:after {
+  content: url(../img/items/ruler_dark.png);
+  opacity: 0.1;
+  position: absolute;
+  top: 68px;
+}
+
+.header__content {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu {
+  margin-right: -450px;
+}
+
+.menu__list li {
+  position: relative;
+  margin: 0px 0px 0px 20px;
+}
+
+.menu__link {
+  color: #fff;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.menu__sub-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #e2534b;
+  min-width: 200px;
+  border-radius: 5px;
+  z-index: 51;
+}
+
+.menu__sub-list li {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.menu__sub-link {
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.23;
+  background-color: #e6655e;
+  padding: 8px 17px 8px 26px;
+}
+
+.menu__sub-link:hover {
+  background-color: #76c7c0;
+}
+
 /*
 	Стиль иконки бургера
 	.icon-menu{
@@ -904,6 +1025,33 @@ body.ie .ibg img {
 		}
 	}
 */
+
+@media (min-width: 767.98px) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menu__list li {
+    padding: 10px 0px;
+  }
+
+  .menu__sub-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    pointer-events: none;
+  }
+}
 
 @media (max-width: 1182px) {
   .container {

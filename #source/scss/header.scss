@@ -1,5 +1,84 @@
-header {
+//====================================================================================================
+.header {
+	background-color: #76c7c0;
+	position: relative;
+	z-index: 50;
+	&:after {
+		content: url(../img/items/ruler_dark.png);
+		opacity: 0.1;
+		position: absolute;
+		top: 68px;
+	}
+	&__content {
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+	}
+	&__menu {
+		margin-right: -450px;
+	}
+	&__search {
+	}
 }
+.menu {
+	&__icon {
+	}
+	&__body {
+	}
+	&__list {
+		li {
+			position: relative;
+			margin: 0px 0px 0px 20px;
+		}
+		@media (min-width: $md3 + px) {
+			display: flex;
+			align-items: center;
+			li {
+				padding: 10px 0px;
+			}
+		}
+	}
+	&__link {
+		color: #fff;
+		line-height: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	&__sub-list {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: #e2534b;
+		min-width: 200px;
+		border-radius: 5px;
+		z-index: 51;
+		li {
+			margin: 5px;
+			border-radius: 5px;
+		}
+		@media (min-width: $md3 + px) {
+			transform: translate(0px, 10%);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.2s ease 0s;
+			pointer-events: none;
+		}
+	}
+	&__sub-link {
+		font-weight: 600;
+		color: #fff;
+		line-height: 1.23;
+		background-color: #e6655e;
+		padding: 8px 17px 8px 26px;
+		&:hover {
+			background-color: #76c7c0;
+		}
+	}
+}
+
 //====================================================================================================
 /*
 	Стиль иконки бургера
