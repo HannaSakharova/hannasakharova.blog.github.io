@@ -32,6 +32,7 @@ $md4: 479.98;
 body {
 	color: #777;
 	font-size: 14px;
+	background-color: #f3f3f3;
 	&.lock {
 		overflow: hidden;
 	}
@@ -72,13 +73,7 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>========================================================
-//@import "../../js/fancybox/jquery.fancybox";
-//@import "datepicker";
-//@import "fontawesome";
-//@import "popover.min";
-//@import "baguetteBox";
-//@import "pagging";
-//@import "icons";
+@import "slider";
 @import "popup";
 @import "header";
 @import "footer";
