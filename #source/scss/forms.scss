@@ -16,6 +16,9 @@
 .search {
 	position: relative;
 	height: 42px;
+	@media (max-width: $md3 + px) {
+		display: none;
+	}
 }
 .search-input {
 	height: 42px;

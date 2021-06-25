@@ -5,12 +5,18 @@
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	transition: transition 0.3s ease 0s;
+	@media (max-width: $md3 + px) {
+		display: none;
+	}
 	&-menu {
 		display: none;
 		border-bottom: 5px solid #e2534b;
 		position: absolute;
 		top: 45px;
 		left: 12px;
+		@media (max-width: $md3 + px) {
+			display: none;
+		}
 	}
 	&-search {
 		display: none;
@@ -23,10 +29,48 @@
 		}
 	}
 }
-
+//===================================================================================================
 .active-link {
 	background-color: #6ab3ad;
 	border-bottom: 5px solid #538c87;
+}
+//===================================================================================================
+.arrow {
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 3px;
+	&-down {
+		transform: rotate(45deg);
+		margin: 0px 6px 2px 0px;
+		transition: transform 0.3s ease 0s;
+		&-1 {
+			@media (max-width: $md3 + px) {
+				margin-bottom: 5px;
+				display: none;
+			}
+		}
+		&-2 {
+			@media (min-width: $md3 + px) {
+				display: none;
+			}
+			@media (max-width: $md3 + px) {
+				border-width: 0 3px 3px 0;
+				margin: 0px 0px 5px 6px;
+				display: inline-block;
+			}
+		}
+	}
+	&-right {
+		transform: rotate(-45deg);
+	}
+	&-left {
+		transform: rotate(135deg);
+	}
+	&-up {
+		transform: rotate(-135deg);
+	}
 }
 //</ОСНОВНОЙ БЛОК>===================================================================================
 
@@ -39,7 +83,7 @@
 .rub:after {
 	content: "₽";
 }
-//====================================================================================================
+//===================================================================================================
 .noselect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;

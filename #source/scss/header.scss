@@ -16,6 +16,15 @@
 		justify-content: space-between;
 	}
 	&__logo {
+		@media (max-width: $md3 + px) {
+			z-index: 51;
+			display: block;
+			margin-left: auto;
+			margin-right: 55%;
+		}
+		@media (max-width: 500px) {
+			margin-right: 60%;
+		}
 	}
 	&__menu {
 		margin-right: -150px;
@@ -29,18 +38,37 @@
 	&__body {
 		@media (max-width: $md3 + px) {
 			position: fixed;
+			overflow: auto;
 			top: 0;
-			left: 0;
+			left: -100%;
 			width: 100%;
 			height: 100%;
 			background-color: #76c7c0;
 			padding: 100px 30px 30px 30px;
 			transition: left 0.3s ease 0s;
+			&:before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				z-index: 58;
+				background-color: #76c7c0;
+			}
+			&.active {
+				left: 0;
+			}
 		}
 	}
 	&__list {
 		@media (max-width: $md3 + px) {
 			font-size: 22px;
+			> li._active-menu {
+				.menu__sub-list {
+					display: block;
+				}
+			}
 		}
 		li {
 			position: relative;
@@ -76,13 +104,9 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		&-s {
-			// margin-right: 5px;
 			&:hover {
 				padding-bottom: 28px;
 			}
-		}
-		&-3 {
-			margin-right: 5px;
 		}
 	}
 	&__arrow {
@@ -95,11 +119,20 @@
 		border-radius: 5px;
 		z-index: 51;
 		background-color: #e2534b;
+		padding: 5px 0px 0px 0px;
 		li {
 			white-space: nowrap;
 			padding: 0px 0px 0px 0px;
-			margin: 5px;
+			margin: 0px 0px 0px 0px;
 			border-radius: 5px;
+			@media (max-width: $md3 + px) {
+				padding: 10px 0px 10px 0px;
+				margin: 6px 5px 6px 0px;
+				&:last-child {
+					padding: 10px 0px 10px 0px;
+					margin: 6px 5px 6px 0px;
+				}
+			}
 		}
 		@media (min-width: $md3 + px) {
 			transform: translate(0px, 10%);
@@ -111,6 +144,8 @@
 			position: relative;
 			flex: 1 1 auto;
 			margin: 20px 0px 0px 0px;
+			padding: 1px 0px 7px 0px;
+			display: none;
 		}
 	}
 	&__sub-link {
@@ -125,6 +160,18 @@
 		}
 		span {
 			margin-right: 8px;
+			@media (max-width: $md3 + px) {
+				margin-bottom: 3px;
+			}
+		}
+		@media (max-width: $md3 + px) {
+			background-color: transparent;
+			padding: 10px;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				background-color: transparent;
+				color: #8cdfd8;
+			}
 		}
 	}
 }
@@ -135,6 +182,21 @@ body._pc .menu__list > li:hover .menu__sub-list {
 	pointer-events: all;
 }
 
+body._touch .menu__list > li._active-menu .menu__sub-list {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+	pointer-events: all;
+}
+
+body._pc .menu__list > li:hover .arrow-down,
+body._touch .menu__list > li._active-menu .arrow-down {
+	margin-bottom: -2px;
+	transform: rotate(-135deg);
+	@media (max-width: $md3 + px) {
+		margin-bottom: 1px;
+	}
+}
 body._pc .menu__list > li:hover .triangle-menu {
 	display: block;
 }
@@ -143,7 +205,7 @@ body._pc .menu__list > li:hover .triangle-menu {
 	@media (max-width: $md3 + px) {
 		display: block;
 		position: absolute;
-		top: 20px;
+		top: 30px;
 		right: 10px;
 		width: 30px;
 		height: 18px;
