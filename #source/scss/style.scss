@@ -101,7 +101,60 @@ body {
 		flex: 0 1 25%;
 		padding: 0px 15px;
 	}
-	&__services-item {
+	&__advantages {
+		padding: 54px 0px 0px 0px;
+		position: relative;
+		background: linear-gradient(180deg, #ececec 50%, #f3f3f3 50%);
+		&:before {
+			content: url("../img/items/ruler_light.png");
+			position: absolute;
+			top: 0;
+		}
+	}
+	&__advantages-title {
+		text-align: center;
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 600;
+		color: #e1524b;
+		margin: 0px 0px 14px 0px;
+	}
+	&__advantages-subtitle {
+		text-align: center;
+		line-height: 20px;
+		font-weight: 400;
+		color: #777777;
+		margin: 0px 0px 68px 0px;
+	}
+	&__advantages-screens {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		margin: 0px 0px 57px 0px;
+		&-1 {
+			grid-area: 1 / 1 / 2 / 2;
+			margin-right: -80px;
+			margin-top: 59px;
+			z-index: 1;
+		}
+		&-2 {
+			grid-area: 1 / 2 / 2 / 3;
+			z-index: 3;
+		}
+		&-3 {
+			grid-area: 1 / 3 / 2 / 4;
+			margin-left: -80px;
+			margin-top: 59px;
+			z-index: 2;
+		}
+		img {
+			border-radius: 8px;
+		}
+	}
+	&__advantages-info {
+		display: flex;
 	}
 }
 .info-services {
@@ -163,7 +216,98 @@ body {
 		right: 35px;
 	}
 }
-
 //=======================================================================================================
-
+.info-advantages {
+	&__item {
+	}
+}
+.item-strengths {
+	width: 240px;
+	margin: 0px 70px 0px 0px;
+	&__title {
+		margin: 0px 0px 37px 0px;
+	}
+	&__text {
+	}
+	&__list {
+		li {
+			line-height: 26px;
+			color: #777777;
+			margin: 0px 0px 0px 0px;
+			span {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.item-charts {
+	width: 550px;
+	margin: 0px 35px 0px 0px;
+	&__text {
+		margin: 0px 0px 60px 0px;
+		line-height: 24px;
+		font-weight: 400;
+		color: #777777;
+		a {
+			text-decoration: underline;
+			color: #e1524b;
+		}
+	}
+	&__body {
+		display: flex;
+	}
+	&__item {
+		margin: 0px 23px 0px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__circle {
+		margin: 0px 0px 24px 0px;
+	}
+	&__title {
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 800;
+		color: #7f8c8c;
+		text-align: center;
+	}
+}
+.item-review {
+	width: 270px;
+	&__title {
+		margin: 0px 0px 23px 0px;
+	}
+	&__text {
+		line-height: 24px;
+		font-weight: 400;
+		font-style: italic;
+		color: #777777;
+		background-color: #f8f8f8;
+		padding: 16px;
+		border-radius: 5px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -40px;
+			left: 25px;
+			border: 20px solid transparent;
+			border-left: 20px solid #f8f8f8;
+			border-bottom: 20px solid #f8f8f8;
+			display: block;
+			width: 0;
+			height: 0;
+			transform: rotate(180deg);
+		}
+	}
+	&__author {
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 600;
+		color: #777777;
+		margin-top: 15px;
+		margin-left: 80px;
+	}
+}
 //</ОСНОВНОЙ БЛОК>=======================================================================================

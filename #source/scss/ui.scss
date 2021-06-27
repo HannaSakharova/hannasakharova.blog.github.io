@@ -1,4 +1,11 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================
+.section-title {
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 800;
+	color: #7f8c8c;
+}
+//===================================================================================================
 .triangle {
 	width: 0;
 	height: 0;
@@ -72,6 +79,35 @@
 		transform: rotate(-135deg);
 	}
 }
+.list-arrow {
+	position: relative;
+	top: -3px;
+	width: 8px;
+	height: 3px;
+	background-color: #e1524b;
+	left: 0;
+	display: inline-block;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 8px;
+		top: -1px;
+		right: -1px;
+		background-color: #e1524b;
+		transform: rotate(45deg);
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 7px;
+		top: -4px;
+		right: -1px;
+		background-color: #e1524b;
+		transform: rotate(-45deg);
+	}
+}
 //===================================================================================================
 .img-svg {
 	width: 52px;
@@ -80,6 +116,15 @@
 }
 .img-svg path {
 	fill: #62bdbd;
+}
+//===================================================================================================
+.circles {
+	&-text {
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 800;
+		color: #7f8c8c;
+	}
 }
 //</ОСНОВНОЙ БЛОК>===================================================================================
 

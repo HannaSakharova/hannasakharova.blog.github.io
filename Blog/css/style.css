@@ -621,6 +621,13 @@ textarea.input {
   color: #888;
 }
 
+.section-title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #7f8c8c;
+}
+
 .triangle {
   width: 0;
   height: 0;
@@ -696,6 +703,42 @@ textarea.input {
           transform: rotate(-135deg);
 }
 
+.list-arrow {
+  position: relative;
+  top: -3px;
+  width: 8px;
+  height: 3px;
+  background-color: #e1524b;
+  left: 0;
+  display: inline-block;
+}
+
+.list-arrow:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  top: -1px;
+  right: -1px;
+  background-color: #e1524b;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.list-arrow:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 7px;
+  top: -4px;
+  right: -1px;
+  background-color: #e1524b;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .img-svg {
   width: 52px;
   height: 57px;
@@ -704,6 +747,13 @@ textarea.input {
 
 .img-svg path {
   fill: #62bdbd;
+}
+
+.circles-text {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+  color: #7f8c8c;
 }
 
 .row:after {
@@ -1389,6 +1439,75 @@ body._pc .menu__list > li:hover .triangle-menu {
   padding: 0px 15px;
 }
 
+.home__advantages {
+  padding: 54px 0px 0px 0px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ececec), color-stop(50%, #f3f3f3));
+  background: -o-linear-gradient(top, #ececec 50%, #f3f3f3 50%);
+  background: linear-gradient(180deg, #ececec 50%, #f3f3f3 50%);
+}
+
+.home__advantages:before {
+  content: url("../img/items/ruler_light.png");
+  position: absolute;
+  top: 0;
+}
+
+.home__advantages-title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  color: #e1524b;
+  margin: 0px 0px 14px 0px;
+}
+
+.home__advantages-subtitle {
+  text-align: center;
+  line-height: 20px;
+  font-weight: 400;
+  color: #777777;
+  margin: 0px 0px 68px 0px;
+}
+
+.home__advantages-screens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0px 0px 57px 0px;
+}
+
+.home__advantages-screens-1 {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-right: -80px;
+  margin-top: 59px;
+  z-index: 1;
+}
+
+.home__advantages-screens-2 {
+  grid-area: 1 / 2 / 2 / 3;
+  z-index: 3;
+}
+
+.home__advantages-screens-3 {
+  grid-area: 1 / 3 / 2 / 4;
+  margin-left: -80px;
+  margin-top: 59px;
+  z-index: 2;
+}
+
+.home__advantages-screens img {
+  border-radius: 8px;
+}
+
+.home__advantages-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .info-services__text {
   max-width: 80%;
 }
@@ -1455,6 +1574,112 @@ body._pc .menu__list > li:hover .triangle-menu {
   position: absolute;
   bottom: -25px;
   right: 35px;
+}
+
+.item-strengths {
+  width: 240px;
+  margin: 0px 70px 0px 0px;
+}
+
+.item-strengths__title {
+  margin: 0px 0px 37px 0px;
+}
+
+.item-strengths__list li {
+  line-height: 26px;
+  color: #777777;
+  margin: 0px 0px 0px 0px;
+}
+
+.item-strengths__list li span {
+  margin-right: 10px;
+}
+
+.item-charts {
+  width: 550px;
+  margin: 0px 35px 0px 0px;
+}
+
+.item-charts__text {
+  margin: 0px 0px 60px 0px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.item-charts__text a {
+  text-decoration: underline;
+  color: #e1524b;
+}
+
+.item-charts__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-charts__item {
+  margin: 0px 23px 0px 0px;
+}
+
+.item-charts__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.item-charts__circle {
+  margin: 0px 0px 24px 0px;
+}
+
+.item-charts__title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #7f8c8c;
+  text-align: center;
+}
+
+.item-review {
+  width: 270px;
+}
+
+.item-review__title {
+  margin: 0px 0px 23px 0px;
+}
+
+.item-review__text {
+  line-height: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: #777777;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.item-review__text:after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 25px;
+  border: 20px solid transparent;
+  border-left: 20px solid #f8f8f8;
+  border-bottom: 20px solid #f8f8f8;
+  display: block;
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.item-review__author {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #777777;
+  margin-top: 15px;
+  margin-left: 80px;
 }
 
 @media (min-width: 767.98px) {

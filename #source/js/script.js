@@ -94,6 +94,72 @@ $(document).ready(function () {
 		}, 'xml');
 	});
 
+	let circleOne = Circles.create({
+		id: 'circles-suspendisse',
+		radius: 60,
+		value: 50,
+		maxValue: 100,
+		width: 15,
+		text: function (value) { return value; },
+		colors: ['#76c7c0', '#e2534b'],
+		duration: 600,
+		wrpClass: 'circles-wrp',
+		textClass: 'circles-text',
+		valueStrokeClass: 'circles-valueStroke',
+		maxValueStrokeClass: 'circles-maxValueStroke',
+		styleWrapper: true,
+		styleText: true
+	});
+	let circleTwo = Circles.create({
+		id: 'circles-maecenas',
+		radius: 60,
+		value: 70,
+		maxValue: 100,
+		width: 15,
+		text: function (value) { return value; },
+		colors: ['#76c7c0', '#e2534b'],
+		duration: 600,
+		wrpClass: 'circles-wrp',
+		textClass: 'circles-text',
+		valueStrokeClass: 'circles-valueStroke',
+		maxValueStrokeClass: 'circles-maxValueStroke',
+		styleWrapper: true,
+		styleText: true
+	});
+	let circleThree = Circles.create({
+		id: 'circles-aliquam',
+		radius: 60,
+		value: 80,
+		maxValue: 100,
+		width: 15,
+		text: function (value) { return value; },
+		colors: ['#76c7c0', '#e2534b'],
+		duration: 600,
+		wrpClass: 'circles-wrp',
+		textClass: 'circles-text',
+		valueStrokeClass: 'circles-valueStroke',
+		maxValueStrokeClass: 'circles-maxValueStroke',
+		styleWrapper: true,
+		styleText: true
+	});
+	let circleFour = Circles.create({
+		id: 'circles-habitasse',
+		radius: 60,
+		value: 100,
+		maxValue: 100,
+		width: 15,
+		text: function (value) { return value; },
+		colors: ['#76c7c0', '#e2534b'],
+		duration: 600,
+		wrpClass: 'circles-wrp',
+		textClass: 'circles-text',
+		valueStrokeClass: 'circles-valueStroke',
+		maxValueStrokeClass: 'circles-maxValueStroke',
+		styleWrapper: true,
+		styleText: true
+	});
+
+
 	//ZOOM
 	if ($('.gallery').length > 0) {
 		baguetteBox.run('.gallery', {
