@@ -80,6 +80,89 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>=======================================================
 
 //<ОСНОВНОЙ БЛОК>========================================================================================
+.home {
+	&__services {
+		margin: 55px 0px 0px 0px;
+		padding: 0px 0px 50px 0px;
+	}
+	&__services-info {
+		margin: 0px 0px 50px 0px;
+		padding: 25px;
+		background-color: #ececec;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__services-items {
+		display: flex;
+		margin: 0 -15px;
+	}
+	&__services-column {
+		flex: 0 1 25%;
+		padding: 0px 15px;
+	}
+	&__services-item {
+	}
+}
+.info-services {
+	&__text {
+		max-width: 80%;
+	}
+	&__btn {
+		text-transform: uppercase;
+	}
+}
+.text-services {
+	&__title {
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: #7f8c8c;
+		margin: 0px 0px 7px 0px;
+	}
+	&__subtitle {
+		line-height: 1.62;
+		color: #777777;
+	}
+}
+.item-services {
+	position: relative;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	border-bottom: 4px solid #e5e6e6;
+	padding: 44px 17px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	height: 100%;
+	&:hover {
+		background-color: #fff;
+		.btn-services {
+			background-color: #e6655e;
+			border-bottom: 4px solid #e2534b;
+		}
+		.img-svg path {
+			fill: #e6655e;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 800;
+		color: #7f8c8c;
+		margin: 0px 0px 36px 0px;
+	}
+	&__text {
+		line-height: 20px;
+		font-weight: 400;
+		color: #777777;
+	}
+	&__btn {
+		position: absolute;
+		bottom: -25px;
+		right: 35px;
+	}
+}
 
 //=======================================================================================================
 

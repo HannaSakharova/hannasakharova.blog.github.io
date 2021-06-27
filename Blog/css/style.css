@@ -142,7 +142,7 @@ body.lock {
   -o-transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
   transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
   position: absolute;
-  top: 50px;
+  top: 47px;
   right: 0;
   z-index: 5;
   opacity: 0;
@@ -159,8 +159,8 @@ body.lock {
   background: transparent;
   border-bottom: 5px solid transparent;
   border-radius: 5px;
-  height: 42px;
-  width: 42px;
+  height: 41px;
+  width: 41px;
   position: absolute;
   top: 0;
   right: 0;
@@ -189,8 +189,42 @@ body.lock {
 }
 
 .btn {
-  display: inline-block;
-  padding: 0px 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+  padding: 0px 44px;
+  width: 200px;
+  height: 50px;
+  background-color: #e6655e;
+  border-bottom: 4px solid #e2534b;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+  background-color: #76c7c0;
+  border-bottom: 4px solid #538c87;
+}
+
+.btn-services {
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #76c7c0;
+  border-bottom: 4px solid #538c87;
 }
 
 .btn.fw {
@@ -611,7 +645,7 @@ textarea.input {
   display: none;
   position: absolute;
   border-bottom: 5px solid #e2534b;
-  top: 45px;
+  top: 42px;
   right: 15px;
 }
 
@@ -660,6 +694,16 @@ textarea.input {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.img-svg {
+  width: 52px;
+  height: 57px;
+  margin: 0px 0px 17px 0px;
+}
+
+.img-svg path {
+  fill: #62bdbd;
 }
 
 .row:after {
@@ -1001,9 +1045,8 @@ body.ie .ibg img {
       -ms-flex-align: center;
           align-items: center;
   background-color: #7f8c8c;
-  position: absolute;
   width: 100%;
-  height: calc(100% - 130px);
+  min-height: calc(100vh - 130px);
 }
 
 .home__slider .slick-arrow {
@@ -1249,7 +1292,7 @@ body.ie .ibg img {
 
 .menu__sub-list {
   position: absolute;
-  top: 140%;
+  top: 125%;
   left: 0;
   min-width: 200px;
   border-radius: 5px;
@@ -1310,6 +1353,108 @@ body._touch .menu__list > li._active-menu .arrow-down {
 
 body._pc .menu__list > li:hover .triangle-menu {
   display: block;
+}
+
+.home__services {
+  margin: 55px 0px 0px 0px;
+  padding: 0px 0px 50px 0px;
+}
+
+.home__services-info {
+  margin: 0px 0px 50px 0px;
+  padding: 25px;
+  background-color: #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home__services-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.home__services-column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding: 0px 15px;
+}
+
+.info-services__text {
+  max-width: 80%;
+}
+
+.info-services__btn {
+  text-transform: uppercase;
+}
+
+.text-services__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #7f8c8c;
+  margin: 0px 0px 7px 0px;
+}
+
+.text-services__subtitle {
+  line-height: 1.62;
+  color: #777777;
+}
+
+.item-services {
+  position: relative;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border-bottom: 4px solid #e5e6e6;
+  padding: 44px 17px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 100%;
+}
+
+.item-services:hover {
+  background-color: #fff;
+}
+
+.item-services:hover .btn-services {
+  background-color: #e6655e;
+  border-bottom: 4px solid #e2534b;
+}
+
+.item-services:hover .img-svg path {
+  fill: #e6655e;
+}
+
+.item-services__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #7f8c8c;
+  margin: 0px 0px 36px 0px;
+}
+
+.item-services__text {
+  line-height: 20px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.item-services__btn {
+  position: absolute;
+  bottom: -25px;
+  right: 35px;
 }
 
 @media (min-width: 767.98px) {

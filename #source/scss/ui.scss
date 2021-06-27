@@ -22,7 +22,7 @@
 		display: none;
 		position: absolute;
 		border-bottom: 5px solid #e2534b;
-		top: 45px;
+		top: 42px;
 		right: 15px;
 		&__active {
 			display: block;
@@ -71,6 +71,15 @@
 	&-up {
 		transform: rotate(-135deg);
 	}
+}
+//===================================================================================================
+.img-svg {
+	width: 52px;
+	height: 57px;
+	margin: 0px 0px 17px 0px;
+}
+.img-svg path {
+	fill: #62bdbd;
 }
 //</ОСНОВНОЙ БЛОК>===================================================================================
 

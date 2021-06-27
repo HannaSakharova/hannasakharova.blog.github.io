@@ -60,9 +60,10 @@
 		justify-content: center;
 		align-items: center;
 		background-color: #7f8c8c;
-		position: absolute;
+		// position: absolute;
 		width: 100%;
-		height: calc(100% - 130px);
+		// height: calc(100% - 130px);
+		min-height: calc(100vh - 130px);
 		.slick-arrow {
 			font-size: 0;
 		}
@@ -156,5 +157,4 @@
 		padding: 15px 38px;
 	}
 }
-
 //=======================================================================================================
