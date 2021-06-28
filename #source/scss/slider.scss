@@ -158,3 +158,50 @@
 	}
 }
 //=======================================================================================================
+.home__clients-body {
+	position: relative;
+	.slick-arrow {
+		position: absolute;
+		top: -65px;
+		font-size: 0;
+		width: 40px;
+		height: 37px;
+		border-bottom: 3px solid #7f8c8c;
+		border-radius: 5px;
+	}
+	.slick-arrow.slick-prev {
+		right: 59px;
+		background-color: #b0b8b9;
+		transition: all 0.3s ease 0s;
+		&:before {
+			content: url(../img/icons/arrow_left.png);
+		}
+		&:hover {
+			background-color: #e6655e;
+			border-bottom: 3px solid #e2534b;
+		}
+	}
+	.slick-arrow.slick-next {
+		right: 0;
+		background-color: #b0b8b9;
+		transition: all 0.3s ease 0s;
+		&:before {
+			content: url(../img/icons/arrow_right.png);
+		}
+		&:hover {
+			background-color: #e6655e;
+			border-bottom: 3px solid #e2534b;
+		}
+	}
+}
+.body-clients {
+	&__item {
+		background-color: #f8f8f8;
+		padding: 34px;
+		border-radius: 5px;
+		margin: 0px 15px;
+		max-width: 170px;
+		max-height: 90px;
+	}
+}
+//=======================================================================================================
