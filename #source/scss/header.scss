@@ -8,33 +8,55 @@
 		opacity: 0.1;
 		position: absolute;
 		top: 68px;
+		@media (max-width: $md4 + px) {
+			top: 48px;
+		}
 	}
 	&__content {
 		height: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media (max-width: $md2 + px) {
+			justify-content: center;
+		}
+		@media (max-width: $md4 + px) {
+			height: 60px;
+		}
 	}
 	&__logo {
+		margin-bottom: 8px;
+		img {
+			@media (max-width: $md2 + px) {
+				width: 150px;
+				height: 18px;
+			}
+			@media (max-width: 820px) {
+				width: 120px;
+				height: 14px;
+			}
+			@media (max-width: $md3 + px) {
+				width: 190px;
+				height: 19px;
+			}
+		}
 		@media (max-width: $md3 + px) {
 			z-index: 51;
-			display: block;
-			margin-left: auto;
-			margin-right: 55%;
-		}
-		@media (max-width: 500px) {
-			margin-right: 60%;
+			margin-right: auto;
 		}
 	}
 	&__menu {
 		margin-right: -150px;
-	}
-	&__search {
+		@media (max-width: 1185px) {
+			margin-right: -50px;
+		}
+		@media (max-width: $md2 + px) {
+			margin: 0px 40px 0px 10px;
+		}
 	}
 }
+
 .menu {
-	&__icon {
-	}
 	&__body {
 		@media (max-width: $md3 + px) {
 			position: fixed;
@@ -54,10 +76,12 @@
 				width: 100%;
 				height: 80px;
 				z-index: 58;
-				background-color: #76c7c0;
 			}
 			&.active {
 				left: 0;
+				&:before {
+					background-color: #76c7c0;
+				}
 			}
 		}
 	}
@@ -73,6 +97,9 @@
 		li {
 			position: relative;
 			margin: 0px 0px 0px 20px;
+			@media (max-width: 1185px) {
+				margin: 0px 0px 0px 10px;
+			}
 			@media (max-width: $md3 + px) {
 				margin: 0px 0px 30px 0px;
 			}
@@ -95,6 +122,12 @@
 					background: #e6655e;
 					border-bottom: 5px solid #e2534b;
 				}
+				@media (max-width: $md2 + px) and (min-width: $md3 + px) {
+					padding: 7px;
+					&:nth-child(4) {
+						display: flex;
+					}
+				}
 			}
 		}
 	}
@@ -108,8 +141,6 @@
 				padding-bottom: 28px;
 			}
 		}
-	}
-	&__arrow {
 	}
 	&__sub-list {
 		position: absolute;
@@ -125,6 +156,9 @@
 			padding: 0px 0px 0px 0px;
 			margin: 0px 0px 0px 0px;
 			border-radius: 5px;
+			@media (max-width: 1185px) {
+				margin: 0px 0px 0px 0px;
+			}
 			@media (max-width: $md3 + px) {
 				padding: 10px 0px 10px 0px;
 				margin: 6px 5px 6px 0px;
@@ -148,6 +182,7 @@
 			display: none;
 		}
 	}
+
 	&__sub-link {
 		font-weight: 600;
 		color: #fff;
@@ -163,6 +198,9 @@
 			@media (max-width: $md3 + px) {
 				margin-bottom: 3px;
 			}
+			@media (max-width: $md2 + px) and (min-width: $md3 + px) {
+				margin-bottom: 2px;
+			}
 		}
 		@media (max-width: $md3 + px) {
 			background-color: transparent;
@@ -175,6 +213,7 @@
 		}
 	}
 }
+
 body._pc .menu__list > li:hover .menu__sub-list {
 	opacity: 1;
 	visibility: visible;
@@ -196,6 +235,9 @@ body._touch .menu__list > li._active-menu .arrow-down {
 	@media (max-width: $md3 + px) {
 		margin-bottom: 1px;
 	}
+	@media (max-width: $md2 + px) and (min-width: $md3 + px) {
+		margin: 5px 6px 2px 0px;
+	}
 }
 body._pc .menu__list > li:hover .triangle-menu {
 	display: block;
@@ -205,7 +247,7 @@ body._pc .menu__list > li:hover .triangle-menu {
 	@media (max-width: $md3 + px) {
 		display: block;
 		position: absolute;
-		top: 30px;
+		top: 28px;
 		right: 10px;
 		width: 30px;
 		height: 18px;
@@ -219,6 +261,7 @@ body._pc .menu__list > li:hover .triangle-menu {
 			width: 100%;
 			height: 2px;
 			background-color: #fff;
+			border-radius: 5px;
 			&:first-child {
 				top: 0px;
 			}
@@ -226,6 +269,9 @@ body._pc .menu__list > li:hover .triangle-menu {
 				top: auto;
 				bottom: 0px;
 			}
+		}
+		@media (max-width: $md4 + px) {
+			top: 18px;
 		}
 		&.active {
 			span {

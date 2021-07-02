@@ -73,14 +73,68 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		speed: 1000,
-		draggable: false
+		draggable: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					autoplay: false
+				}
+			}
+		]
 	});
 	$('.home__clients-body').slick({
 		dots: false,
 		easing: 'ease',
 		draggable: false,
 		slidesToShow: 6,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1184,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 558,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 370,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: false
+				}
+			}
+		]
 	});
 
 

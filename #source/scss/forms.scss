@@ -16,9 +16,9 @@
 .search {
 	position: relative;
 	height: 42px;
-	@media (max-width: $md3 + px) {
-		display: none;
-	}
+	// @media (max-width: $md3 + px) {
+	// 	display: none;
+	// }
 }
 .search-input {
 	height: 42px;
@@ -38,25 +38,32 @@
 		opacity: 1;
 		visibility: visible;
 	}
+	@media (max-width: $md2 + px) and (min-width: $md3 + px) {
+		width: 175px;
+	}
 }
 
 .search-btn {
 	background: transparent;
 	border-bottom: 5px solid transparent;
 	border-radius: 5px;
-	height: 41px;
-	width: 41px;
+	height: 35px;
+	width: 35px;
 	position: absolute;
-	top: 0;
+	top: 4px;
 	right: 0;
 	cursor: pointer;
 	transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
 	&:before {
 		content: url("../img/icons/search.png");
 		position: absolute;
-		top: 12px;
-		right: 13px;
+		top: 8px;
+		right: 10px;
 		z-index: 60;
+		@media (max-width: $md3 + px) {
+			top: 10px;
+			right: 11px;
+		}
 	}
 	&:hover {
 		background: #e6655e;
@@ -65,6 +72,12 @@
 	&__active {
 		background: #e6655e;
 		border-bottom: 5px solid #e2534b;
+	}
+	@media (max-width: $md3 + px) {
+		height: 38px;
+		width: 38px;
+		top: 0px;
+		right: 45px;
 	}
 }
 //</FORM>=============================================================================================
@@ -91,11 +104,29 @@
 		background-color: #76c7c0;
 		border-bottom: 4px solid #538c87;
 	}
+	@media (max-width: $md2 + px) {
+		font-size: 18px;
+		width: 150px;
+		height: 50px;
+	}
+	@media (max-width: $md3 + px) {
+		height: 43px;
+	}
+	@media (max-width: $md4 + px) {
+		font-size: 16px;
+	}
+	@media (max-width: 320px) {
+		height: 40px;
+		font-size: 14px;
+	}
 	&-services {
 		font-size: 14px;
 		line-height: 16px;
 		background-color: #76c7c0;
 		border-bottom: 4px solid #538c87;
+		@media (max-width: $md2 + px) {
+			font-size: 14px;
+		}
 	}
 	&.fw {
 		width: 100%;

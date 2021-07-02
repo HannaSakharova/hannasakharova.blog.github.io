@@ -33,6 +33,11 @@
 		right: 15px;
 		&__active {
 			display: block;
+			@media (max-width: $md3 + px) {
+				display: block;
+				top: 42px;
+				right: 60px;
+			}
 		}
 	}
 }
@@ -52,6 +57,9 @@
 		transform: rotate(45deg);
 		margin: 0px 6px 2px 0px;
 		transition: transform 0.3s ease 0s;
+		@media (max-width: $md2 + px) and (min-width: $md3 + px) {
+			margin: 5px 6px 2px 0px;
+		}
 		&-1 {
 			@media (max-width: $md3 + px) {
 				margin-bottom: 5px;
@@ -114,6 +122,11 @@
 	width: 52px;
 	height: 57px;
 	margin: 0px 0px 17px 0px;
+	@media (max-width: $md3 + px) {
+		width: 45px;
+		height: 50px;
+		margin: 0px 0px 14px 0px;
+	}
 }
 .img-svg path {
 	fill: #62bdbd;

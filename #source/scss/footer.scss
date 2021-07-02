@@ -9,28 +9,33 @@
 			position: absolute;
 			top: 0;
 		}
+		@media (max-width: $md3 + px) {
+			padding: 30px 0px;
+		}
+		@media (max-width: 425px) {
+			padding-bottom: 20px;
+		}
 	}
 	&__items {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $md3 + px) {
+			flex-direction: column;
+		}
 	}
-	&__item {
-	}
-	&__logo {
-	}
-	&__copy {
-		background-color: #6ab3ad;
-		height: 50px;
+	&__footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 50px;
+	}
+	&__copy {
+		background-color: #6ab3ad;
 	}
 	&__copy-title {
 		font-size: 12px;
 		line-height: 21px;
 		color: #ffffff;
-	}
-	&__copy-social {
 	}
 }
 .item-description {
@@ -39,6 +44,12 @@
 		margin: 33px 0px;
 		line-height: 23px;
 		color: #ffffff;
+		@media (max-width: $md3 + px) {
+			margin: 10px 0px 5px 0px;
+		}
+		@media (max-width: 425px) {
+			line-height: 20px;
+		}
 	}
 	&__contacts {
 		line-height: 23px;
@@ -51,20 +62,83 @@
 			font-style: italic;
 			color: #ffffff;
 			padding: 0px 0px 0px 20px;
+			@media (max-width: $md3 + px) {
+				font-size: 18px;
+				line-height: 24px;
+				padding: 0px 0px 0px 15px;
+			}
+			@media (max-width: 425px) {
+				font-size: 16px;
+				line-height: 22px;
+				padding: 0px 0px 0px 10px;
+			}
 		}
+		@media (max-width: $md3 + px) {
+			line-height: 20px;
+		}
+	}
+	// @media (max-width: 1184px) {
+	// 	max-width: 340px;
+	// 	margin: 0px 20px 0px 0px;
+	// }
+	@media (max-width: $md3 + px) {
+		max-width: 100%;
 	}
 }
 .item-nav {
 	display: flex;
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+		margin: 0px 0px 0px 10px;
+	}
+	@media (max-width: $md3 + px) {
+		flex-direction: row;
+		margin: 15px 0px;
+	}
+	@media (max-width: 425px) {
+		flex-direction: column;
+	}
 	&__title {
 		font-size: 20px;
 		line-height: 24px;
 		font-weight: 700;
 		color: rgba(0, 0, 0, 0.5);
 		margin: 0px 0px 30px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 5px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		@media (max-width: 425px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 	&__company {
 		margin: 0px 85px 0px 0px;
+		@media (max-width: 1184px) {
+			margin: 0px 60px 0px 0px;
+			width: 100px;
+		}
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 60px 0px 0px;
+		}
+		@media (max-width: 425px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	&__community {
+		@media (max-width: 1184px) {
+			margin: 0px 30px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 0px 0px;
+		}
 	}
 	&__list {
 		span {
@@ -82,8 +156,9 @@
 		&:hover {
 			border-bottom: 1px solid #fff;
 		}
-	}
-	&__community {
+		@media (max-width: 425px) {
+			line-height: 22px;
+		}
 	}
 }
 .item-blog {
@@ -103,6 +178,15 @@
 				border-bottom: 1px solid #fff;
 			}
 		}
+		@media (max-width: $md3 + px) {
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0px 0px 15px 0px;
+		}
+		@media (max-width: 425px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 }
 .el-blog {
@@ -120,20 +204,57 @@
 		background-color: #000000;
 		padding: 21px 18px;
 		margin: 0px 18px 0px 0px;
-	}
-	&__info {
+		@media (max-width: $md3 + px) {
+			width: 60px;
+			height: 60px;
+			padding: 17px 14px;
+			margin: 0px 10px 0px 0px;
+		}
 	}
 	&__text {
 		line-height: 19px;
 		color: #ffffff;
 		margin: 0px 0px 8px 0px;
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 4px 0px;
+		}
+		@media (max-width: 425px) {
+			line-height: 16px;
+			margin: 0px 0px 8px 0px;
+		}
 	}
 	&__data {
 		opacity: 0.5;
 		line-height: 19px;
 		color: #000000;
+		@media (max-width: 425px) {
+			line-height: 16px;
+		}
+	}
+	@media (max-width: $md3 + px) {
+		max-width: 100%;
+		margin: 0px 0px 10px 0px;
 	}
 }
 .social {
+	&__item {
+		font-size: 18px;
+		color: #fff;
+		margin: 0px 25px 0px 0px;
+		transition: color 0.3s ease 0s;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		&:hover {
+			color: #e1524b;
+		}
+		@media (max-width: $md3 + px) {
+			font-size: 16px;
+			margin: 0px 20px 0px 0px;
+		}
+		@media (max-width: 425px) {
+			margin: 0px 10px 0px 0px;
+		}
+	}
 }
 //====================================================================================================
