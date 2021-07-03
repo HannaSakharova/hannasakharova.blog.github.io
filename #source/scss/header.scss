@@ -113,6 +113,16 @@
 			display: flex;
 			align-items: center;
 			li {
+				&.active-link {
+					background-color: #6ab3ad;
+					border-radius: 5px;
+					padding: 10px;
+					border-bottom: 5px solid #538c87;
+					&:hover {
+						background-color: #6ab3ad;
+						border-bottom: 5px solid #538c87;
+					}
+				}
 				padding: 10px;
 				border-bottom: 5px solid transparent;
 				transition: all 0.3s ease 0s;

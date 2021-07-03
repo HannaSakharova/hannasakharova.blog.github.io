@@ -1,0 +1,124 @@
+.services {
+	&__team-items {
+		display: flex;
+		margin: 0 -15px;
+		@media (max-width: $md2 + px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@media (max-width: $md3 + px) {
+			margin-top: 50px;
+			margin: 0 -10px;
+		}
+		@media (max-width: $md4 + px) {
+			margin-top: 30px;
+		}
+	}
+	&__team-column {
+		flex: 0 1 25%;
+		padding: 0px 15px;
+		@media (max-width: $md2 + px) {
+			flex: 0 1 33.3333%;
+		}
+		@media (max-width: $md3 + px) {
+			flex: 0 1 50%;
+			padding: 0px 10px;
+		}
+		@media (max-width: 512px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.item-servicess {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: #f8f8f8;
+	padding: 73px 35px;
+	border-radius: 5px;
+	border-bottom: 4px solid #e5e6e6;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background-color: #76c7c0;
+		.item-servicess__btn {
+			background-color: #e6655e;
+			border-bottom: 4px solid #e2534b;
+		}
+		.item-servicess__text {
+			color: #fff;
+			border-bottom: 1px solid #6ab3ad;
+		}
+	}
+	@media (max-width: 1183px) {
+		padding: 50px 20px;
+	}
+	@media (max-width: $md2 + px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: $md3 + px) {
+		padding: 50px 30px;
+		margin-bottom: 50px;
+	}
+	&__text {
+		text-align: center;
+		line-height: 28px;
+		font-weight: 400;
+		color: #777777;
+		border-bottom: 1px solid #ececec;
+		padding: 10px 0;
+		&-n {
+			border-bottom: none;
+		}
+	}
+}
+.item-servicess {
+	&__btn {
+		position: absolute;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: 700;
+		color: #ffffff;
+		&-t {
+			top: -25px;
+			@media (max-width: $md3 + px) {
+				top: -20px;
+			}
+		}
+		&-b {
+			bottom: -25px;
+			@media (max-width: $md3 + px) {
+				bottom: -20px;
+			}
+		}
+		@media (max-width: 1183px) {
+			left: 5%;
+		}
+		@media (max-width: $md2 + px) {
+			left: 17.5%;
+		}
+		@media (max-width: $md3 + px) {
+			font-size: 14px;
+			line-height: 14px;
+			left: 27%;
+		}
+		@media (max-width: 688px) {
+			left: 24%;
+		}
+		@media (max-width: 616px) {
+			left: 21%;
+		}
+		@media (max-width: 556px) {
+			left: 18%;
+		}
+		@media (max-width: 512px) {
+			left: 35%;
+		}
+		@media (max-width: 416px) {
+			left: 30%;
+		}
+		@media (max-width: 372px) {
+			left: 27%;
+		}
+	}
+}
+//===================================================================================================

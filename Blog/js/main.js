@@ -222,6 +222,12 @@ $(document).ready(function () {
 		styleText: true
 	});
 
+	//Change the color of the active menu-link
+	$('ul.menu__list a').each(function () {
+		if (this.href == location.href) $(this).parent().addClass('active-link');
+	});
+
+
 
 
 	$('.goto').click(function () {
