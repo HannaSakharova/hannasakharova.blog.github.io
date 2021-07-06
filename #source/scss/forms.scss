@@ -136,6 +136,31 @@
 			border-bottom: 4px solid #e2534b;
 		}
 	}
+	&-portfolio {
+		cursor: pointer;
+		width: 200px;
+		height: 50px;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		background-color: #76c7c0;
+		border-bottom: 4px solid #538c87;
+		padding: 0px 10px;
+		text-transform: uppercase;
+		&:hover {
+			background-color: #e6655e;
+			border-bottom: 4px solid #e2534b;
+		}
+		@media (max-width: $md2 + px) {
+			width: 150px;
+			height: 45px;
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@media (max-width: $md4 + px) {
+			width: 100%;
+		}
+	}
 	&.fw {
 		width: 100%;
 	}

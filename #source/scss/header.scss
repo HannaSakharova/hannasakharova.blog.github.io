@@ -192,7 +192,6 @@
 			display: none;
 		}
 	}
-
 	&__sub-link {
 		font-weight: 600;
 		color: #fff;
@@ -251,6 +250,9 @@ body._touch .menu__list > li._active-menu .arrow-down {
 }
 body._pc .menu__list > li:hover .triangle-menu {
 	display: block;
+}
+.menu__sub-list li.active-link .menu__sub-link {
+	background-color: #6ab3ad;
 }
 //====================================================================================================
 .icon-menu {

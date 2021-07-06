@@ -227,41 +227,17 @@ $(document).ready(function () {
 		if (this.href == location.href) $(this).parent().addClass('active-link');
 	});
 
+	//Tabs
+	$('.tabs-triggers__link').click(function (e) {
+		e.preventDefault();
 
+		$('.tabs-triggers__link').removeClass('tabs-triggers__link--active');
+		$('.tabs-content__items').removeClass('tabs-content__items--active');
 
-
-	$('.goto').click(function () {
-		var el = $(this).attr('href').replace('#', '');
-		var offset = 0;
-		$('body,html').animate({ scrollTop: $('.' + el).offset().top + offset }, 500, function () { });
-
-		if ($('.menu__body').hasClass('active')) {
-			$('.menu__body,.icon-menu').removeClass('active');
-			$('body').removeClass('lock');
-		}
-		return false;
+		$(this).addClass('tabs-triggers__link--active');
+		$($(this).attr('href')).addClass('tabs-content__items--active');
 	});
-
-
-	function ibg() {
-		if (isIE()) {
-			let ibg = document.querySelectorAll(".ibg");
-			for (var i = 0; i < ibg.length; i++) {
-				if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
-					ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-				}
-			}
-		}
-	}
-	ibg();
-
-
-	//Клик вне области
-	$(document).on('click touchstart', function (e) {
-		if (!$(e.target).is(".select *")) {
-			$('.select').removeClass('active');
-		};
-	});
+	$('.tabs-triggers__link:first').click();
 
 
 

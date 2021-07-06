@@ -75,6 +75,7 @@
 			line-height: 14px;
 			transition: all 0.3s ease 0s;
 			&:hover {
+				color: #e1524b;
 				text-decoration: underline;
 			}
 			@media (max-width: $md4 + px) {
