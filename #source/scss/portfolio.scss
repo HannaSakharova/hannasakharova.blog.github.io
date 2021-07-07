@@ -374,6 +374,12 @@
 		@media (max-width: $md3 + px) {
 			margin: 0px 0px 22px 0px;
 		}
+		&--proj {
+			margin: 0px 0px 0px 0px;
+			@media (max-width: $md3 + px) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
 	}
 	&__icons {
 		display: flex;
@@ -421,3 +427,106 @@
 	}
 }
 //=======================================================================================================
+.project {
+	&__description-content {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $md2 + px) {
+			flex-direction: column;
+		}
+	}
+}
+.project-description {
+	width: 767px;
+	@media (max-width: 1184px) {
+		width: 567px;
+	}
+	@media (max-width: $md2 + px) {
+		width: 100%;
+	}
+	&__title {
+		margin: 0px 0px 23px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 15px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 0px 0px 8px 0px;
+		}
+	}
+	&__text {
+		line-height: 22px;
+		color: #7f8c8c;
+		p {
+			margin: 0px 0px 34px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+			@media (max-width: $md2 + px) {
+				margin: 0px 0px 10px 0px;
+				&:last-child {
+					margin: 0px 0px 0px 0px;
+				}
+			}
+			@media (max-width: $md4 + px) {
+				line-height: 20px;
+				margin: 0px 0px 5px 0px;
+				&:last-child {
+					margin: 0px 0px 0px 0px;
+				}
+			}
+		}
+	}
+}
+.project-details {
+	width: 270px;
+	@media (max-width: $md2 + px) {
+		width: 100%;
+	}
+	&__title {
+		margin: 0px 0px 23px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 15px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 10px 0px 5px;
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 5px;
+		border-top: 1px solid #e1e2e2;
+		&-1 {
+			padding-top: 0;
+			border-top: none;
+			@media (max-width: $md2 + px) {
+				padding-top: 0;
+			}
+		}
+		@media (max-width: $md2 + px) {
+			padding: 10px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 5px 0px;
+		}
+		a {
+			color: #e2534b;
+			transition: color 0.3s ease 0s;
+			&:hover {
+				color: #ce3f37;
+			}
+		}
+	}
+	&__name {
+		line-height: 26px;
+		color: #777777;
+		img {
+			margin: 5px 10px 0px 0px;
+		}
+	}
+	&__content {
+		line-height: 26px;
+		color: #777777;
+	}
+}

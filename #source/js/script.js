@@ -136,7 +136,53 @@ $(document).ready(function () {
 			}
 		]
 	});
-
+	$('.project__slider-content').slick({
+		dots: true,
+		easing: 'ease',
+		draggable: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					dots: true
+				}
+			}
+		]
+	});
+	$('.projects__slider-body').slick({
+		dots: false,
+		easing: 'ease',
+		draggable: false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
 
 	//For svg image
 	$('img.img-svg').each(function () {

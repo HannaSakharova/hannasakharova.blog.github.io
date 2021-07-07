@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contacts</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="contacts">
+			<section class="block__header">
+				<div class="container">
+					<div class="block__header-content">
+						<div class="block__header-name">Contacts</div>
+						<div class="block__header-links">
+							<a href="index.html">Home</a> / <a href="contacts.html">Contacts</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contacts__map">
+				<div class="container">
+					<div class="contacts__map-img"></div>
+				</div>
+			</section>
+			<section class="contacts__text">
+				<div class="container">
+					<div class="contacts__text-text"> Etiam tincidunt laoreet turpis a vulputate. Etiam diam lorem, convallis
+						ac laoreet a, pretium id nisl. Morbi tincidunt nibh a ante fringilla at tincidunt eros venenatis. Nunc
+						a dui mi, in imperdiet sem. Aenean eu nulla massa. Ut interdum tristique est commodo pharetra.
+					</div>
+				</div>
+			</section>
+			<section class="contacts__content">
+				<div class="container">
+					<div class="contacts__content-body">
+						<div class="contacts__content-column">
+							<div class="contacts__content-item contacts-form">
+								<div class="contacts__content-title">Send inquiry</div>
+								<form action="" class="contacts-form__body">
+									<div>
+										<input type="text" name="name">
+										<label for="name">Name</label>
+									</div>
+									<div>
+										<input type="email" name="email">
+										<label for="email">E-mail</label>
+									</div>
+									<div>
+										<input type="text" name="website">
+										<label for="website">Website</label>
+									</div>
+									<div>
+										<textarea name="message" id="" cols="30" rows="10"></textarea>
+									</div>
+									<div>
+										<button class="contacts-form__btn" type="submit">SEND</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="contacts__content-column">
+							<div class="contacts__content-item contacts-address">
+								<div class="contacts__content-title">ADDRESS</div>
+								<div class="contacts-address__location"><a href="geo:40.764901350821724,-73.96235754160493">Ut
+										interdum tristique est com
+										modo pharetra.</a></div>
+								<div class="contacts-address__phone"><a href="tel:+11156985698">111 5698 5698</a></div>
+								<div class="contacts-address__mail"><a href="mailto:modus@versus.com">modus@versus.com</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
