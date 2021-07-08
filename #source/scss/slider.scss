@@ -432,5 +432,27 @@
 	}
 }
 //=======================================================================================================
+.post-body {
+	&__slider {
+	}
+}
+.slider-blog {
+	&__item {
+		// width: 700px;
+		// height: 460px;
+		// background-color: #f8f8f8;
+		// border-radius: 5px;
+		// border-bottom: 3px solid #e5e6e6;
+	}
+	&__img {
+		width: 700px;
+		height: 460px;
+		background-color: #f8f8f8;
+		border-radius: 5px;
+		border-bottom: 3px solid #e5e6e6;
+		text-align: center;
+		padding: 105px 0px;
+	}
+}
 
 //=======================================================================================================

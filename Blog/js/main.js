@@ -66,7 +66,7 @@ $(document).ready(function () {
 		arrowInput.classList.toggle('triangle-search__active');
 	});
 
-	//Slider home
+	//Sliders
 	$('.home__slider').slick({
 		dots: true,
 		easing: 'ease',
@@ -284,10 +284,6 @@ $(document).ready(function () {
 		$($(this).attr('href')).addClass('tabs-content__items--active');
 	});
 	$('.tabs-triggers__link:first').click();
-
-
-
-
 });
 //FORMS
 function forms() {
