@@ -183,6 +183,20 @@ $(document).ready(function () {
 			}
 		]
 	});
+	$('.blog-single__slider').slick({
+		dots: true,
+		easing: 'ease',
+		draggable: false,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false
+				}
+			}
+		]
+	});
 
 	//For svg image
 	$('img.img-svg').each(function () {

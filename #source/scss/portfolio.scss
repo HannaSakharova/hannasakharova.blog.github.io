@@ -242,6 +242,12 @@
 		&--blog {
 			justify-content: flex-start;
 			margin: 69px 0px 0px 0px;
+			@media (max-width: $md3 + px) {
+				margin: 40px 0px 0px 0px;
+			}
+			@media (max-width: $md4 + px) {
+				margin: 25px 0px 0px 0px;
+			}
 		}
 	}
 	&__pagination-link {
