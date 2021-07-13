@@ -16,9 +16,6 @@
 .search {
 	position: relative;
 	height: 42px;
-	// @media (max-width: $md3 + px) {
-	// 	display: none;
-	// }
 }
 .search-input {
 	height: 42px;
@@ -33,6 +30,7 @@
 	z-index: 5;
 	opacity: 0;
 	visibility: hidden;
+	line-height: 24px;
 	color: #7f8c8c;
 	&__active {
 		opacity: 1;

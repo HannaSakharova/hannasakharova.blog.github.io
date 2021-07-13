@@ -197,6 +197,24 @@ $(document).ready(function () {
 			}
 		]
 	});
+	$('.features__slider').slick({
+		dots: true,
+		easing: 'ease',
+		draggable: false,
+		infinite: false
+	});
+	$('.page-slideshow').slick({
+		dots: true,
+		easing: 'ease',
+		draggable: false,
+		infinite: false
+	});
+	$('.sidebar-slideshow').slick({
+		dots: true,
+		easing: 'ease',
+		draggable: false,
+		infinite: false
+	});
 
 	//For svg image
 	$('img.img-svg').each(function () {
@@ -298,4 +316,46 @@ $(document).ready(function () {
 		$($(this).attr('href')).addClass('tabs-content__items--active');
 	});
 	$('.tabs-triggers__link:first').click();
+	$('.tabs-features__links').click(function (e) {
+		e.preventDefault();
+
+		$('.tabs-features__links').removeClass('tabs-features__links--active');
+		$('.tabs-features__inner').removeClass('tabs-features__inner--active');
+
+		$(this).addClass('tabs-features__links--active');
+		$($(this).attr('href')).addClass('tabs-features__inner--active');
+	});
+	$('.tabs-features__links:first').click();
+
+	$('.tabs-features__links-s').click(function (e) {
+		e.preventDefault();
+
+		$('.tabs-features__links-s').removeClass('tabs-features__links-s--active');
+		$('.tabs-features__inner-s').removeClass('tabs-features__inner-s--active');
+
+		$(this).addClass('tabs-features__links-s--active');
+		$($(this).attr('href')).addClass('tabs-features__inner-s--active');
+	});
+	$('.tabs-features__links-s:first').click();
+
+	//Accordions
+	$('.accordion-big__trigger').click(function () {
+		const parent = $(this).parent();
+		if (parent.hasClass('accordion-active')) {
+			parent.removeClass('accordion-active');
+		} else {
+			$('.accordion-big__item').removeClass('accordion-active');
+			parent.addClass('accordion-active');
+		}
+	});
+	$('.accordion-small__trigger').click(function () {
+		const parent = $(this).parent();
+		if (parent.hasClass('accordion-active')) {
+			parent.removeClass('accordion-active');
+		} else {
+			$('.accordion-small__item').removeClass('accordion-active');
+			parent.addClass('accordion-active');
+		}
+	});
+
 });
