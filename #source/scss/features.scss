@@ -1,23 +1,56 @@
 .features {
 	&__content {
 		padding: 60px 0px;
+		@media (max-width: $md2 + px) {
+			padding: 50px 0px;
+		}
 	}
 	&__services {
 		margin: 92px 0px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 72px 0px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 62px 0px 0px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 25px 0px 0px 0px;
+		}
 	}
 }
 //=======================================================================================================
 .sliders-features {
 	display: flex;
 	margin: 90px 0px 0px 0px;
-	&__column {
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+	}
+	@media (max-width: $md3 + px) {
+		margin: 60px 0px 0px 0px;
+	}
+	@media (max-width: $md4 + px) {
+		margin: 40px 0px 0px 0px;
 	}
 }
 .sidebar-gallery {
 	margin: 76px 0px 0px 0px;
+	@media (max-width: $md2 + px) {
+		width: 50%;
+		margin: 0px 0px 0px 40px;
+	}
+	@media (max-width: 610px) {
+		width: 100%;
+		margin: 50px 0px 0px 0px;
+	}
+	@media (max-width: $md4 + px) {
+		margin: 30px 0px 0px 0px;
+	}
 	&__title {
 		margin: 0px 0px 28px 0px;
 		text-transform: uppercase;
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 	&__content {
 		display: flex;
@@ -32,6 +65,15 @@
 		margin: 0px 30px 22px 0px;
 		&:nth-child(3n + 3) {
 			margin: 0px 0px 22px 0px;
+			@media (max-width: $md3 + px) {
+				margin: 0px 0px 15px 0px;
+			}
+			@media (max-width: 610px) {
+				margin: 0px 20px 15px 0px;
+			}
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 20px 15px 0px;
 		}
 		img {
 			width: 33px;
@@ -39,17 +81,39 @@
 		}
 	}
 }
+.sliders-side {
+	@media (max-width: $md2 + px) {
+		display: flex;
+	}
+	@media (max-width: 610px) {
+		flex-direction: column;
+	}
+}
 //=======================================================================================================
 .features {
 	&__accordion {
 		margin: 83px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 53px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 23px 0px 0px;
+		}
 	}
 	&__accordion-content {
 		margin: 0 -15px;
 		display: flex;
+		@media (max-width: $md2 + px) {
+			flex-direction: column;
+		}
 	}
 	&__accordion-item {
 		padding: 0px 15px;
+		&:last-child {
+			@media (max-width: $md2 + px) {
+				margin-top: 15px;
+			}
+		}
 	}
 }
 .accordion-big {
@@ -148,24 +212,62 @@
 .features {
 	&__tabs {
 		margin: 46px 0px 0px 0px;
+		@media (max-width: $md4 + px) {
+			margin: 26px 0px 0px 0px;
+		}
 	}
 	&__tabs-content {
 		margin: 0 -15px;
 		display: flex;
+		@media (max-width: $md2 + px) {
+			flex-direction: column;
+			margin: 0;
+		}
 	}
 	&__tabs-item {
 		padding: 0 15px;
+		@media (max-width: $md2 + px) {
+			padding: 0;
+		}
 	}
+}
+.slider-triggers__item {
+	padding: 18px 26px;
 }
 .tabs-features {
 	&--big {
 		flex: 0 1 75%;
+		@media (max-width: $md2 + px) {
+			flex: 0 1 100%;
+		}
+		.tabs-features__triggers {
+			@media (max-width: $md4 + px) {
+				display: none;
+			}
+			&--slider {
+				display: none;
+				@media (max-width: $md4 + px) {
+					display: block;
+					margin: 0px 0px -9px 0px;
+				}
+			}
+		}
 	}
 	&--small {
 		flex: 0 1 25%;
+		@media (max-width: $md2 + px) {
+			flex: 0 1 100%;
+			margin: 40px 0px 0px 0px;
+		}
+		@media (max-width: $md2 + px) {
+			margin: 30px 0px 0px 0px;
+		}
 	}
 	&__triggers {
 		margin: 0px 0px 18px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 15px 0px;
+		}
 	}
 	&__links {
 		font-size: 16px;
@@ -192,6 +294,18 @@
 				background-color: #f8f8f8;
 			}
 		}
+		@media (max-width: $md2 + px) {
+			padding: 15px 26px;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 15px;
+			margin: 0px 5px 0px 0px;
+			font-size: 14px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 10px;
+			margin: 0px 3px 0px 0px;
+		}
 	}
 	&__inner {
 		display: none;
@@ -202,6 +316,15 @@
 		&--active {
 			display: flex;
 			justify-content: space-between;
+			@media (max-width: $md4 + px) {
+				flex-direction: column-reverse;
+			}
+		}
+		@media (max-width: $md2 + px) {
+			padding: 25px;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 20px;
 		}
 	}
 	&__text {
@@ -209,6 +332,18 @@
 		color: #777777;
 		max-width: 600px;
 		width: 100%;
+		@media (max-width: $md2 + px) {
+			max-width: 70%;
+		}
+		@media (max-width: $md4 + px) {
+			max-width: 100%;
+			margin: 10px 0px 0px 0px;
+		}
+		&--s {
+			@media (max-width: $md2 + px) {
+				max-width: 100%;
+			}
+		}
 	}
 	&__img {
 		background-color: #ffffff;
@@ -218,6 +353,12 @@
 		img {
 			width: 40px;
 			height: auto;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 62px 40px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 52px 40px;
 		}
 	}
 }
@@ -246,6 +387,22 @@
 			background-color: #f8f8f8;
 		}
 	}
+	@media (max-width: 1184px) {
+		padding: 18px 13px;
+		margin: 0px 5px 0px 0px;
+	}
+	@media (max-width: $md2 + px) {
+		padding: 15px 22px;
+	}
+	@media (max-width: $md3 + px) {
+		padding: 15px;
+		margin: 0px 5px 0px 0px;
+		font-size: 14px;
+	}
+	@media (max-width: $md4 + px) {
+		padding: 10px;
+		margin: 0px 3px 0px 0px;
+	}
 }
 .tabs-features__inner-s {
 	display: none;
@@ -256,9 +413,21 @@
 	&--active {
 		display: block;
 	}
+	@media (max-width: $md2 + px) {
+		padding: 25px;
+	}
+	@media (max-width: $md3 + px) {
+		padding: 20px;
+	}
 }
 .tabs-features__triggers-s {
 	margin: 0px 0px 18px 0px;
+	@media (max-width: $md2 + px) {
+		margin: 0px 0px 15px 0px;
+	}
+	@media (max-width: $md4 + px) {
+		margin: 0px 0px 10px 0px;
+	}
 }
 .features {
 	&__project {
@@ -267,6 +436,16 @@
 }
 .feature-proj {
 	margin: 34px 0px 0px 0px;
+	&-ss {
+		@media (max-width: $md3 + px) {
+			margin: 20px 0px 0px 0px;
+		}
+		&:last-child {
+			@media (max-width: $md4 + px) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
 }
 //=======================================================================================================
 .features {
@@ -275,9 +454,25 @@
 		border-bottom: 3px solid #e5e6e6;
 		border-top: 3px solid #e5e6e6;
 		padding: 52px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 20px 0px 0px 0px;
+			padding: 40px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 30px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 20px 0px;
+		}
 	}
 	&__texts-fullwidth {
 		margin: 0px 0px 50px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 40px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 25px 0px;
+		}
 	}
 	&__title {
 		font-size: 16px;
@@ -285,6 +480,9 @@
 		font-weight: 800;
 		color: #7f8c8c;
 		margin: 0px 0px 19px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 15px 0px;
+		}
 	}
 	&__text {
 		line-height: 22px;
@@ -293,13 +491,36 @@
 	&__texts-halfwidth {
 		display: flex;
 		margin: 0px 0px 50px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 40px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 0px 0px 25px 0px;
+			flex-direction: column;
+		}
 	}
 	&__texts-thirdwidth {
 		margin: 0px 0px 50px 0px;
 		display: flex;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 40px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			flex-direction: column;
+		}
 	}
 	&__texts-quarterwidth {
 		display: flex;
+		@media (max-width: $md3 + px) {
+			flex-wrap: wrap;
+			width: 100%;
+		}
 	}
 }
 .halfwidth-text {
@@ -308,6 +529,10 @@
 		margin: 0px 40px 0px 0px;
 		&:last-child {
 			margin: 0px 0px 0px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			flex: 0 1 100%;
+			margin: 0px 0px 15px 0px;
 		}
 	}
 }
@@ -318,9 +543,19 @@
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			flex: 0 1 100%;
+			margin: 0px 20px 15px 0px;
+		}
 	}
 	&__content--small {
 		flex: 0 1 25%;
+		@media (max-width: $md4 + px) {
+			flex: 0 1 100%;
+		}
 	}
 }
 .quarterwidth-text {
@@ -330,6 +565,10 @@
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
+		@media (max-width: $md3 + px) {
+			flex: 0 1 100%;
+			margin: 0px 0px 15px 0px;
+		}
 	}
 }
 //=======================================================================================================
@@ -338,9 +577,26 @@
 		margin: 53px 0px 0px 0px;
 		padding: 0px 0px 33px 0px;
 		border-bottom: 3px solid #e5e6e6;
+		@media (max-width: $md2 + px) {
+			margin: 33px 0px 0px 0px;
+			padding: 0px 0px 23px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 23px 0px 0px 0px;
+			padding: 0px 0px 13px 0px;
+		}
 	}
 	&__lists-title {
 		margin: 0px 0px 35px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 0px 0px 15px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 0px 0px 5px 0px;
+		}
 	}
 	&__lists-circle {
 		li {
@@ -441,14 +697,40 @@
 .features {
 	&__intro {
 		margin: 43px 0px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 33px 0px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 23px 0px 0px 0px;
+		}
 	}
 }
 //=======================================================================================================
 .features {
 	&__tables {
 		margin: 54px 0px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 44px 0px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 34px 0px 0px 0px;
+		}
 	}
 	&__tables-items {
+		@media (max-width: 600px) {
+			overflow-x: auto;
+		}
+		&:last-child {
+			display: flex;
+			margin: 0 -15px;
+			@media (max-width: $md3 + px) {
+				flex-direction: column;
+			}
+		}
+	}
+	&__tables-column {
+		flex: 0 1 50%;
+		padding: 0 15px;
 	}
 }
 .table-big {
@@ -471,6 +753,36 @@
 	}
 	&__text {
 		padding: 12px;
+	}
+}
+.table-small {
+	width: 100%;
+	margin: 44px 0px 0px 0px;
+	border-radius: 5px;
+	border-bottom: 4px solid #e5e6e6;
+	border-spacing: 0;
+	@media (max-width: $md2 + px) {
+		margin: 30px 0px 0px 0px;
+	}
+	@media (max-width: $md3 + px) {
+		margin: 20px 0px 0px 0px;
+	}
+	th,
+	td {
+		border: 1px solid #dddddd;
+		text-align: left;
+	}
+	th {
+		border-bottom: 3px solid #e5e6e6;
+	}
+	&__heading {
+		border-radius: 5px 5px 0px 0px;
+		padding: 19px;
+		background-color: #62b9b0;
+		color: #fff;
+		&--r {
+			background-color: #e2534b;
+		}
 	}
 }
 //=======================================================================================================

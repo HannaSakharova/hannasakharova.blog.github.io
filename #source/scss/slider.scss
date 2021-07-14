@@ -626,6 +626,12 @@
 		padding: 250px 0px 150px;
 		border-radius: 5px;
 		border-bottom: 3px solid #e5e6e6;
+		@media (max-width: $md3 + px) {
+			padding: 150px 0px 120px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 70px 0px;
+		}
 	}
 	&__text {
 		font-size: 25px;
@@ -633,6 +639,16 @@
 		font-weight: 700;
 		color: #b0b8b9;
 		margin: 100px 0px 0px 0px;
+		@media (max-width: $md3 + px) {
+			font-size: 22px;
+			line-height: 26px;
+			margin: 80px 0px 0px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			font-size: 18px;
+			line-height: 22px;
+			margin: 30px 0px 0px 0px;
+		}
 	}
 }
 //=======================================================================================================
@@ -641,12 +657,29 @@
 	width: 100%;
 	position: relative;
 	margin: 0px 30px 0px 0px;
+	@media (max-width: $md2 + px) {
+		max-width: 100%;
+		margin: 0px 0px 60px 0px;
+	}
+	@media (max-width: $md4 + px) {
+		max-width: 100%;
+		margin: 0px 0px 40px 0px;
+	}
 	&__item {
 		background-color: #f8f8f8;
 		text-align: center;
 		padding: 240px 0px 145px;
 		border-radius: 5px;
 		border-bottom: 3px solid #e5e6e6;
+		@media (max-width: $md2 + px) {
+			padding: 150px 0px 110px;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 100px 0px 70px;
+		}
+		@media (max-width: $md4 + px) {
+			padding: 60px 0px 40px;
+		}
 	}
 	&__img {
 		img {
@@ -660,6 +693,18 @@
 		font-weight: 700;
 		color: #b0b8b8;
 		margin: 74px 0px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 50px 0px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			font-size: 22px;
+			line-height: 26px;
+			margin: 30px 0px 0px 0px;
+		}
+		@media (max-width: $md4 + px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 	.slick-arrow {
 		font-size: 0;
@@ -738,12 +783,24 @@
 	max-width: 270px;
 	width: 100%;
 	position: relative;
+	@media (max-width: $md2 + px) {
+		max-width: 50%;
+	}
+	@media (max-width: 610px) {
+		max-width: 100%;
+	}
 	&__item {
 		background-color: #f8f8f8;
 		text-align: center;
 		padding: 58px 0px 37px;
 		border-radius: 5px;
 		border-bottom: 3px solid #e5e6e6;
+		@media (max-width: $md2 + px) {
+			padding: 78px 0px 47px;
+		}
+		@media (max-width: $md3 + px) {
+			padding: 58px 0px 40px;
+		}
 	}
 	&__img {
 		img {
@@ -757,15 +814,18 @@
 		font-weight: 700;
 		color: #b0b8b8;
 		margin: 20px 0px 0px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 40px 0px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			margin: 30px 0px 0px 0px;
+		}
 	}
 	.slick-arrow {
 		font-size: 0;
 		position: absolute;
 		top: 38%;
 		z-index: 80;
-		// @media (max-width: $md2 + px) {
-		// 	top: 42%;
-		// }
 	}
 	.slick-arrow.slick-prev {
 		background-color: #e6655e;
